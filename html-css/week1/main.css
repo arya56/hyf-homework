@@ -1,0 +1,192 @@
+/* || General setup */
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 10px;
+  background-color:#a9a9a9;
+}
+
+body {
+  width: 70%;
+  min-width: 800px;
+  margin: 0 auto;
+}
+
+p, li {
+  font-size: 1.6rem;
+  line-height: 1.5;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+  /* || typography */
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Cinzel Decorative', cursive;
+    color: #2a2a2a;
+  }
+
+  p, li {
+    font-family: 'Roboto Condensed', sans-serif;
+    color: #2a2a2a;
+  }
+
+  h1 {
+    font-size: 4rem;
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 10px black;
+  }
+  
+  h2 {
+    font-size: 3rem;
+    text-align: center;
+  }
+  
+  h3, h4, h5, h6 {  
+    font-size: 2.2rem;
+    text-align: center;
+  }
+
+  p, li {
+    font-size: 1.6rem;
+    line-height: 1.5;
+  }
+
+/* || header layout */
+
+  header {
+    background: url(https://picsum.photos/1000/200?random=1);
+   /* margin-bottom: 10px;*/
+    display: flex;
+    align-items: center ;
+    justify-content: center;
+  }
+  
+  header img  {
+    display: block ;
+    width: 10%;
+  }
+
+  h1 {
+    flex: 5;
+    text-transform: uppercase;
+  }
+
+  .flex1 {
+    order: 1;
+  }
+  
+     /*   styling the ul of learning strategy  */
+
+    .little-into ul > li {
+      list-style-type: none;
+      line-height: 3;
+      padding: 10px;
+      display: inline-block; 
+    }
+
+    iframe {
+      border: 0px;
+    }
+
+   header, section {
+    background-color: rgba(212, 224, 170, 0.705);
+    padding: 1%;
+  }
+  
+  main  {
+    background-color: rgba(42, 44, 37, 0.705);
+    background-color: rgba(215, 223, 197, 0.705);
+    padding : 1%;
+
+  }
+
+  article, footer, aside {
+    background-color:rgba(218, 207, 207, 0.801);
+    padding: 1%;
+  }
+  
+  section {
+    margin: 5px;
+    padding: 1%;
+    border: 3px dotted rgba(80, 83, 72, 0.705);
+  }
+
+  footer {
+    background-color:#a9a9a9;
+    padding: 1%;
+    
+  }
+
+  aside > div , nav li{
+    padding: 5%;
+    margin-top: 130px;
+    border: 1px  rgba(80, 83, 72, 0.705) dotted;
+  }
+
+/* |||| The side Navigation */
+
+  aside {
+    margin-left: 10px;
+    padding: 1%;
+    display: flex;
+    flex-direction: column;
+  }
+    
+  nav{
+    margin: 0px;
+    padding: 0px;
+  }   
+
+  
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    padding:0;
+    list-style-type: none;
+    flex:2;
+  }
+
+  nav li{
+    display: inline;
+    text-align: center;
+    margin:2px;
+    padding:0;
+  }
+
+  nav a {
+    display: inline-block;
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black
+  }
+    
+  /* || main layout */
+  
+  main {
+    display: flex;
+  }
+
+  
+  article, section {
+    flex: 4;
+  }
+
+  article {
+    overflow: auto;
+  }
+  
+
+  footer {
+    margin-top: 10px;
+  }
+  
