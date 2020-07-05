@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Home/styles.css"/>
+ <title>Document</title>
+</head>
+<header>
+    <div>Logo & navigation</div>
+    <h1>Sign up to yourcustomtailor.com</h1>
+</header>
+<body>
+    <!--Title and description on top and before form-->
+    <h2>Step 4/4 - Payment</h2>
+    <h3>Progress</h3>
+    <div>    
+    <div class="progress4">progress</div>
+    </div>
+     <p>Please fill in your payment data</p>
+    <form method="POST">
+        <section>
+            
+            <p>
+                <label for="cardn">
+                    <span>Name on card</span>
+                </label>
+                <input type="text" id="cardn" name="card_name">
+            </p>
+            <p>
+                <label for="card-t">
+                    <span>Card type</span>
+                </label>
+                <select id="card-t" name="usercard">
+                    <option value="visa">Visa</option>
+                    <option value="mc">Mastercard</option>
+                    <option value="amex">American Express</option>
+                </select>
+            </p>
+            <p>
+                <label for="number-c">
+                    <span>Credit card number</span>
+                </label>
+                <input type="tel" id="number-c" name="cardnumber">
+                <label for="fname2">
+                    <span>First name</span>
+                </label>
+                <input type="text" id="fname2" name="frs_name">
+            </p>
+            <p>
+                <label for="expmonth">
+                    <span>Expiry month</span>
+                </label>
+                <input type="tel" id="expmonth" name="exp_month" maxlength="2" >
+
+                <label for="expyear">
+                    <span>Expiry year</span>
+                </label>
+                <input type="tel" id="expyear" name="exp_year" maxlength="2" >
+            </p>
+            <p>
+                <label for="ccvn">
+                    <span>CCV</span>
+                </label>
+                <input type="tel" id="ccvn" name="ccv_code" maxlength="3" >
+            </p>
+            <!--this is the button of the second page-->
+<!--             <button type="submit">Next step</button>
+ -->        </section>
+<!--         <a href="../Home/index.html">Next step</a>
+ -->                <a href="index.html">Next step</a>
+
+            </form>
+
+</body>
+</html>
+
+
+  
