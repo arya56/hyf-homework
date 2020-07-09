@@ -24,15 +24,15 @@
             
             <p>
                 <label for="cardn">
-                    <span>Name on card</span>
+                    <span>Name on card*</span>
                 </label>
-                <input type="text" id="cardn" name="card_name">
+                <input type="text" id="cardn" name="card_name" required>
             </p>
             <p>
                 <label for="card-t">
-                    <span>Card type</span>
+                    <span>Card type*</span>
                 </label>
-                <select id="card-t" name="usercard">
+                <select id="card-t" name="usercard" required>
                     <option value="visa">Visa</option>
                     <option value="mc">Mastercard</option>
                     <option value="amex">American Express</option>
@@ -40,30 +40,30 @@
             </p>
             <p>
                 <label for="number-c">
-                    <span>Credit card number</span>
+                    <span>Credit card number*</span>
                 </label>
-                <input type="tel" id="number-c" name="cardnumber">
+                <input type="tel" id="number-c" name="cardnumber" required>
                 <label for="fname2">
-                    <span>First name</span>
+                    <span>First name*</span>
                 </label>
-                <input type="text" id="fname2" name="frs_name">
+                <input type="text" id="fname2" name="frs_name" required>
             </p>
             <p>
                 <label for="expmonth">
-                    <span>Expiry month</span>
+                    <span>Expiry month*</span>
                 </label>
-                <input type="tel" id="expmonth" name="exp_month" maxlength="2" >
+                <input type="tel" id="expmonth" name="exp_month" maxlength="2" required >
 
                 <label for="expyear">
-                    <span>Expiry year</span>
+                    <span>Expiry year*</span>
                 </label>
-                <input type="tel" id="expyear" name="exp_year" maxlength="2" >
+                <input type="tel" id="expyear" name="exp_year" maxlength="2" required >
             </p>
             <p>
                 <label for="ccvn">
-                    <span>CCV</span>
+                    <span>CCV*</span>
                 </label>
-                <input type="tel" id="ccvn" name="ccv_code" maxlength="3" >
+                <input type="tel" id="ccvn" name="ccv_code" minlength="3" maxlength="3" required>
             </p>
             <!--this is the button of the second page-->
 <!--             <button type="submit">Next step</button>

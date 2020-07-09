@@ -30,7 +30,7 @@
     </div>
     <p>Nice to meed you. let's spend a minute to get to know each other? Please enter the following:</p>
     
-    <form method="post">
+    <form>
         <section>
             <p>
                 <label for="fname">
@@ -63,7 +63,7 @@
                 <label for="postn">
                     <span>Post Code*</span>
                 </label>
-                <input type="tel" id="postn" name="post_code" minlength="4" maxlength="4" required >
+                <input type="tel" id="postn" name="post_code" minlength="4" maxlength="4" inputmode="numeric" required >
             </p><br><br><br>
            <!--!!!!!!!!!!!!!!!!!!!!!!!          1  description      !!!!!!!!!!!!!!!!!!!!!!!!-->
             <div class="one-row" >
@@ -137,18 +137,13 @@
                 <textarea id="profile-shp" name="user_profile_shp" maxlength="500" width=50></textarea>
 
             </p>
-
-            <!-- the button on unchecked conditon-->
-
         </div>
         <br><br>
         <br><br>
-<!--         <a href="../step2/step2.html" >Next step></a>
- -->
-      <a href="step2.html" >Next step</a>
 
     </form>
 
+    <a href="step2.html"><input id="next-step" type="submit" value="Next step"></a>
 
     
 
