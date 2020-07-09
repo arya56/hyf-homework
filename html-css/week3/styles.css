@@ -1,0 +1,244 @@
+
+
+.newsletter {
+    display: flex;
+    justify-content: space-around;
+}
+
+.newsletter span{
+    white-space: nowrap;
+}
+.newsletter label {
+    align-self: center;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    padding: 40px;
+    position: absolute;
+    border: 1px solid lightgray;
+    width: 95%;
+    margin: 10px 50px;}
+h1{
+    font-size: 3.3em;
+}
+header p, body > p {
+    font-size: 1.4em;
+    line-height: 1.4;
+}
+
+h2 {
+    font-size: 2.7em;
+}
+/*||||||||      Progress    ||||||||||*/  
+.progress1 {
+    border: 1px solind blue;
+    background: lightgray;
+    width: 5%;
+    line-height: 3;
+    color: lightgray;
+}
+
+.progress2 {
+    border: 1px solind blue;
+    background: lightgray;
+    width: 25%;
+    line-height: 3;
+    color: lightgray;
+}
+
+.progress3 {
+    border: 1px solind blue;
+    background: lightgray;
+    width: 45%;
+    line-height: 3;
+    color: lightgray;
+}
+
+.progress4 {
+    border: 1px solind blue;
+    background: lightgray;
+    width: 90%;
+    line-height: 3;
+    color: lightgray;
+}
+
+body > div {
+    max-width: 100%;
+    background-color: white;
+    border: 1px solid darkcyan;
+    margin: 0 auto;
+}
+
+h3 {
+    margin:0;}
+/* }
+ body > p {
+    font-size: 1em;
+} */ 
+ /*     left: 50%;
+    top: 50%;
+  */
+   /*  margin-top: -25%;
+    margin-left: -25%; */
+
+    
+/* body > div  */
+/* .fuck {
+    font-family: sans-serif ;
+    font-size: 16px;
+    max-width: 500px ;
+    margin: 0 auto;
+    background: rgb(174, 204, 216);
+    margin: 0 auto;
+    border:1px solid red ;
+    padding: 20px;
+    margin: 20;
+} */
+
+form {
+    padding-left: 70px;
+
+}
+
+form * {
+     box-sizing: border-box    ;
+     line-height: 1.5;
+
+}
+
+* {
+box-sizing: border-box;
+}
+
+form p{
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+
+form p > * {
+    align-self: center
+}
+
+/* |||| form items style ||||*/
+
+
+label  {
+    font-weight: 600;
+    padding: 10px 0 ;
+}
+input, select {
+    outline: none;
+    border-radius: 4px;
+    background: #f9f9f9;
+    border: 1px solid lightgray;
+    width: 25%;
+    height: 60px;
+    line-height: 2;
+    font-size: 0.9em    ;
+    font-family: sans-serif;
+    padding-left: 0.5em;
+}
+
+
+/*|||   textarea   |||   */
+
+                            .one-row > label {
+                                all: none;
+                                font-size: 24px;
+                                height: 230;
+                                width: 25%;
+                                display: inline-block;  
+                                padding: 0;
+                                margin: 0; 
+                            }
+
+                            .one-row em, .one-row p {
+                                all:none;
+                                padding-top: 0;
+                                font-size: 18px;
+                                line-height: -2;
+                                font-weight: 80;
+                            }
+
+                            textarea {
+                                width: 70%;
+                                height: 230px;
+                                vertical-align: top;
+                                border-radius: 4px;
+                                background: #f9f9f9;
+                                border: 1px solid lightgray;
+                            }
+/********|||||||    button   ||||||||||************/
+.one-row {
+    position: relative;
+}
+
+a { 
+    display: inline-block;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-weight: 600;
+    font-size: 1.1em;
+    padding: 16px 16px;
+    margin: 10px 0;
+    background: #c4bcbc;
+    border: 1px solid rgb(124, 120, 120);
+    text-align: center;
+    color: black;
+    width: 300px;
+    height: 80px;
+    position: absolute;
+    right: 25px;
+    bottom: 10px;
+/*     float: right;
+ */
+
+}
+
+
+/*     style the grid on step3   */
+
+ul{
+    display: grid;
+    grid-template-columns: 350px 350px 350px 350px ;
+    column-gap: 40px;
+    row-gap: 90px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+li img{
+    width: 100%; 
+}
+
+
+li > label {
+     display: block;
+    width:350px;
+    margin-bottom: 3vh;
+    text-align: end;
+  
+    
+
+}
+
+
+.shipoo:checked~.to-hide{
+    display: none;
+}
+
+/*  |||||||||||||||step 3|||||||||||||*/
+#int__items  {
+    display: grid;
+    grid-template-columns: repeat(2, 20vw);
+  }
+
+#int__items label {
+    display: block;
+    width: 300px;
+    text-align: right;
+    margin-top: 10px;
+  }
