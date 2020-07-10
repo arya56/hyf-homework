@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="styles.css"/>
+  <title>Document</title>
+  <style>
+
+  </style>
+</head>
+<header>
+    <!--  This is first page
+         logo and navigation comes in header-->
+    <div>Logo & navigation</div>
+    <h1>Sign up to yourcustomtailor.com</h1>
+    <p>We can't wait to help you improve your life-style and gain the attention from people around
+        <br> you! <br>
+        <br>Sign up below to save up to 70% on apparel, hand-bags and cosmetics. Our agents are busy
+        <br>picking the best offers that match your preferences and style. Every week we will send you a
+        <br>hand-picked selection-we just need to know a few details about you first...
+    </p>
+</header>
+<body>
+    <!--Title and description on top and before form-->
+    <h2>Step 1/4 - tell us who you are?</h2>
+    <h3>Progress</h3>
+    <div>    
+    <div class="progress1">progress</div>
+    </div>
+    <p>Nice to meed you. let's spend a minute to get to know each other? Please enter the following:</p>
+    
+    <form  >
+        <section>
+            <p>
+                <label for="fname">
+                    <span>First name*</span>
+                </label>
+                <input type="text" id="fname" name="first_name" required >
+                <label for="lname">
+                    <span>Last name*</span>
+                </label>
+                <input type="text" id="lname" name="last_name" required>
+            </p>
+            <p>
+                <label for="country">
+                    <span>Country*</span>
+                </label> 
+                <select id="country" name="country" required>
+                    <option value="0"></option>
+                    <option value="1">Denmark</option>
+                    <option value="2">Norway</option>
+                    <option value="3">Sweden</option>
+                    <option value="4">Germany</option>
+                </select>
+            </p>
+            <p>
+                <label for="address">
+                    <span>Street address*</span>
+                </label>
+                <input type="text" id="address" name="address" required>
+
+                <label for="postn">
+                    <span>Post Code*</span>
+                </label>
+                <input type="tel" id="postn" name="post_code" minlength="4" maxlength="4" inputmode="numeric" pattern="[0-9]{4}" required >
+            </p><br><br><br>
+           <!--!!!!!!!!!!!!!!!!!!!!!!!          1  description      !!!!!!!!!!!!!!!!!!!!!!!!-->
+            <div class="one-row" >
+                <label for="profile">
+                    <span>Profile description</span><br><br>    
+                    <em>Please provide a short
+                    <br>description of yourself to be
+                    <br>displayed on our social
+                    <br>community pages.</em>
+                </label> 
+                <textarea id="profile" name="user_profile" maxlength="500" width=50></textarea>
+            </div><br>
+            <div>Use the same address for billing and shipping? Uncheck below to fill out a separate shipping address.</div>
+        </section>
+        <!--Checked or Unchecked part-->
+        
+            <label for="ship1">
+                <span>shipping address</span>
+            </label>
+            <input id="ship1" class="shipoo" type="checkbox" name="show-more" checked >
+        
+        <!--these part would hide in checkmarked condition-->
+        
+        <div class="to-hide">
+            <p>Shiping address</p>
+            <p>
+                <label for="fname-shp">
+                    <span>First name*</span>
+                </label>
+                <input type="text" id="fname-shp" name="first_name_shp" required>
+
+
+                <label for="lname-shp">
+                    <span>Last name*</span>
+                </label>
+                <input type="text" id="lname-shp" name="last_name_shp" required>
+            </p>
+            <p>
+                <label for="country-shp">
+                    <span>Country*</span>
+                </label> 
+                <select id="country-shp" name="country_shp" required>
+                    
+                    <option value="1">Denmark</option>
+                    <option value="2">Norway</option>
+                    <option value="3">Sweden</option>
+                    <option value="4">Germany</option>
+                </select>
+            </p>
+            <p>
+                <label for="address-shp">
+                    <span>Street address*</span>
+                </label>
+                <input type="text" id="address-shp" name="address_shp" required>
+
+                <label for="post-shp">
+                    <span>Post Code*</span>
+                </label>
+                <input type="tel" id="post-shp" name="post_code_shp" minlength="4" maxlength="4" required>
+            </p><br><br><br>
+               <!--!!!!!!!!!!!!!!!!!!!!!!!          2th description      !!!!!!!!!!!!!!!!!!!!!!!!-->
+
+            <p class="one-row" >
+                <label for="profile-shp" >
+                    <span>Profile description</span><br><br>    
+                    <em>Please provide a short
+                    <br>description of yourself to be
+                    <br>displayed on our social
+                    <br>community pages.</em>
+                </label> 
+                <textarea id="profile-shp" name="user_profile_shp" maxlength="500" width=50></textarea>
+
+            </p>
+        </div>
+        <br><br>
+        <br><br>
+
+<!--         <input type="submit" value="Next step" class="submit" />
+ -->
+
+ <a href="step2.html"
+        ><input id="next-step" type="submit" value="Next step"
+      /></a>
+    </form>
+
+<!--     <a href="step2.html"><input id="next-step" type="submit" value="Next step"></a> -->
+
+
+    
+
+</body>
+</html>
