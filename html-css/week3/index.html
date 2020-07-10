@@ -30,7 +30,7 @@
     </div>
     <p>Nice to meed you. let's spend a minute to get to know each other? Please enter the following:</p>
     
-    <form>
+    <form action="step2.html" method="GET">
         <section>
             <p>
                 <label for="fname">
@@ -63,7 +63,7 @@
                 <label for="postn">
                     <span>Post Code*</span>
                 </label>
-                <input type="tel" id="postn" name="post_code" minlength="4" maxlength="4" inputmode="numeric" required >
+                <input type="tel" id="postn" name="post_code" minlength="4" maxlength="4" inputmode="numeric" pattern="[0-9]{4}" required >
             </p><br><br><br>
            <!--!!!!!!!!!!!!!!!!!!!!!!!          1  description      !!!!!!!!!!!!!!!!!!!!!!!!-->
             <div class="one-row" >
@@ -141,9 +141,12 @@
         <br><br>
         <br><br>
 
+        <input type="submit" value="Next step" class="submit" />
+
     </form>
 
-    <a href="step2.html"><input id="next-step" type="submit" value="Next step"></a>
+<!--     <a href="step2.html"><input id="next-step" type="submit" value="Next step"></a> -->
+
 
     
 
