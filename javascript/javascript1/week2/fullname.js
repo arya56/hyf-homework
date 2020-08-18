@@ -67,7 +67,33 @@ console.log(getEventWeekday(6));
 
 
 //     addStudentToClass function    arr.includes(1) 
-let class07Students = [];
+const class07Students = [];
+
+function addStudentToClass( studentName ) {
+
+
+    /// re arrange
+    if ( studentName === "" && class07Students.length < 6 ) {
+        return "Please insert a name!"
+    }
+    else if (class07Students.length < 6 && !class07Students.includes(studentName)){
+        class07Students.push(studentName);
+    }
+    else if (class07Students.length === 6 && studentName ==="Queen" && !class07Students.includes('Queen')){
+        class07Students.push(studentName);
+        return;
+    }
+  else if (class07Students.length >= 6 ) {
+   return "Cannot add more students to class 07.";
+}
+      else {
+        return "Student "+studentName+" is already in the class" ;
+    }
+    
+
+}    
+//     addStudentToClass Previous Version 
+/* const class07Students = [];
 function addStudentToClass( studentName ) {
     if (class07Students.length < 6 && studentName !="" ){
         if (!class07Students.includes(studentName)){
@@ -83,10 +109,10 @@ function addStudentToClass( studentName ) {
           return "Please insert a name!"
     }
     else {
-        return  "Cannot add more students to class 07.";
+        return  "Cannot add more students to https://www.google.com/search?q=check+if+a+value+is+a+number+javascript&oq=check+if+a+value+is+a+number+javascript&aqs=chrome..69i57j0l7.9204j0j7&sourceid=chrome&ie=UTF-8class 07.";
     }
 }
-
+ */
 //    getNumberOfStudents function
 function getNumberOfStudents() {
     return class07Students.length;
