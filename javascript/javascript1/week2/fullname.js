@@ -10,6 +10,7 @@
     } else {
    return '"'+firstname+" "+surname+'"' ;
 }}
+
 const fullname1 = getFullname("Benjamin","Hughes",true);
 const fullname2 = getFullname("Ali","Ehsan");
 console.log(fullname1);
