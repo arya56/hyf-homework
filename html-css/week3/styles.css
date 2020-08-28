@@ -175,7 +175,7 @@ input, select {
     position: relative;
 }
 
-a { 
+.submit{ 
     display: inline-block;
     text-decoration: none;
     font-family: sans-serif;

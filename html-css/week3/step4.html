@@ -19,7 +19,8 @@
     <div class="progress4">progress</div>
     </div>
      <p>Please fill in your payment data</p>
-    <form method="POST">
+     <form action="#"> 
+
         <section>
             
             <p>
@@ -42,7 +43,7 @@
                 <label for="number-c">
                     <span>Credit card number*</span>
                 </label>
-                <input type="tel" id="number-c" name="cardnumber" required>
+                <input type="tel" id="number-c" name="cardnumber" pattern="[0-9]{16}" minlength="16" maxlength="16" required>
                 <label for="fname2">
                     <span>First name*</span>
                 </label>
@@ -52,24 +53,25 @@
                 <label for="expmonth">
                     <span>Expiry month*</span>
                 </label>
-                <input type="tel" id="expmonth" name="exp_month" maxlength="2" required >
+                <input type="tel" id="expmonth" name="exp_month" pattern="0[1-9]|1[0-2]" maxlength="2" required >
 
                 <label for="expyear">
                     <span>Expiry year*</span>
                 </label>
-                <input type="tel" id="expyear" name="exp_year" maxlength="2" required >
+                <input type="tel" id="expyear" name="exp_year" pattern="[0-9]{2}" maxlength="2" required >
             </p>
             <p>
                 <label for="ccvn">
                     <span>CCV*</span>
                 </label>
-                <input type="tel" id="ccvn" name="ccv_code" minlength="3" maxlength="3" required>
+                <input type="tel" id="ccvn" name="ccv_code" pattern="[0-9]{3}" minlength="3" maxlength="3" required>
             </p>
             <!--this is the button of the second page-->
 <!--             <button type="submit">Next step</button>
  -->        </section>
 <!--         <a href="../Home/index.html">Next step</a>
- -->                <a href="index.html">Next step</a>
+                 <a href="index.html">Next step</a>    -->
+                 <input type="submit" value="Next Step" class="submit" />
 
             </form>
 

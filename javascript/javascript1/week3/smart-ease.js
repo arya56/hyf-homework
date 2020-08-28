@@ -1,6 +1,7 @@
 const notes = [];
 function saveNote(content, id) {
-  notes.push({ content: content, id: id });
+  //notes.push({ content: content, id: id });
+  notes.push({ content, id });
 }
 
 saveNote("Pick up groceries", 1);
@@ -11,7 +12,7 @@ saveNote("Take a shower", 4);
 function getNote(id) {
   for (let i = 0; i < notes.length; i++) {
     if (!id || isNaN(id)) {
-      console.log("The id doesn't exist!");
+      return "The id doesn't exist!";
     } else if (notes[i].id === id) {
       return notes[i].content;
     }
@@ -145,5 +146,3 @@ function theLongestActivity(){
 }
 
 theLongestActivity();
-
-

@@ -5,9 +5,12 @@ function getFullname( firstname, surname, useFormalName) {
     if ( firstname === "" && surname ===""){
         return "Please fill the form fully";
     }
-result = useFormalName ?  '"Lord '+firstname+" "+surname+'"' : '"'+firstname+" "+surname+'"' ;
-return result;
-}
+    if ( useFormalName ) {
+        return '"Lord '+firstname+" "+surname+'"' ;
+    } else {
+   return '"'+firstname+" "+surname+'"' ;
+}}
+
 const fullname1 = getFullname("Benjamin","Hughes",true);
 const fullname2 = getFullname("Ali","Ehsan");
 const fullname3 = getFullname("","");
@@ -112,10 +115,10 @@ function addStudentToClass( studentName ) {
           return "Please insert a name!"
     }
     else {
-        return  "Cannot add more students to class 07.";
+        return  "Cannot add more students to https://www.google.com/search?q=check+if+a+value+is+a+number+javascript&oq=check+if+a+value+is+a+number+javascript&aqs=chrome..69i57j0l7.9204j0j7&sourceid=chrome&ie=UTF-8class 07.";
     }
 }
-
+ */
 //    getNumberOfStudents function
 function getNumberOfStudents() {
     return class07Students.length;
@@ -124,4 +127,3 @@ addStudentToClass("Ali");
 getNumberOfStudents();
 console.log(class07Students);  
 
-*/

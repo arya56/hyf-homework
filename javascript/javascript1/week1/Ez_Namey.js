@@ -1,3 +1,4 @@
+//just a tiny change on last line as mentor reviewed
 const firstWords = [ "Easy" , "Awesome" , "Corporate" , "Highly" , "Brownish", "Underneath" , "Wonderful" , "Fabulous" , "Highlighted", "Commited"];
 const secondWords = [ "Golden" , "Silver" , "Ultimate" , "Absolute" , "Sky" , "Earth" , "Planet", "Panda", "Bear" , "Wolves"];
 let startupName= "";
