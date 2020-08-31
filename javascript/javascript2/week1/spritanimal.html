@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Please enter your name</h1>
+
+    Name: <input type="text" id="myName" name="fname"><br>
+    <button id="Btn" >Save</button>
+    <button id="Btn2" >Change once</button>
+
+        <p>Please select save mode:</p>
+    <input type="radio" id="hover" name="ChooseKey" value="hoverT" onclick="if(this.checked){hoverFunction()}">
+        <label for="hover">Hover over text</label><br>
+        <input type="radio" id="buttn" name="ChooseKey" value="buttonP" onclick="if(this.checked){buttonFunction()}">
+        <label for="buttn">Button</label><br>
+        <input type="radio" id="textWritten" name="ChooseKey" value="textW" onclick="if(this.checked){writtenTextFunction()}">
+        <label for="textWritten">Write into textbox</label>
+
+    <div id=displaySprit></div>
+
+
+
+        <script type="text/javascript" src="./spritanimal.js"></script>
+    
+</body>
+</html>
