@@ -1,7 +1,7 @@
 //    Formal fullname
 
 
- function getFullname( firstname, surname, useFormalName) {
+function getFullname( firstname, surname, useFormalName) {
     if ( firstname === "" && surname ===""){
         return "Please fill the form fully";
     }
@@ -13,8 +13,11 @@
 
 const fullname1 = getFullname("Benjamin","Hughes",true);
 const fullname2 = getFullname("Ali","Ehsan");
+const fullname3 = getFullname("","");
+
 console.log(fullname1);
 console.log(fullname2); 
+console.log(fullname3); 
 
 
 //     Event application
@@ -26,20 +29,23 @@ console.log(fullname2);
     let dayOfEvent;
     eventDay += date;
 
-if( eventDay >= 7  && eventDay%6 != 0){
-        eventDay = Math.abs(( eventDay % 6 )- (~~(eventDay/6)));
-     }
+    if( eventDay >= 7  && eventDay%6 != 0){
+            eventDay = Math.abs(( eventDay % 6 )- (~~(eventDay/6)));
+        }
 
-else if ( eventDay%6 === 0  && eventDay >= 7 ){
-    eventDay = eventDay/6 +1;
-}
+    else if ( eventDay%6 === 0  && eventDay >= 7 ){
+        eventDay = eventDay/6 +1;
+        }
 dayOfEvent = weekday[eventDay];
 
-console.log("Today is " +'"'+dayOfWeek+'"' +" So event would be held on " + '"'+dayOfEvent+'"!' );
+result2 = "Today is " +'"'+dayOfWeek+'"' +" So event would be held on " + '"'+dayOfEvent+'"!' ;
+return result2;
 }
+
 console.log(getEventWeekday(6)); 
 
-    //    Weather wear
+ 
+//    Weather wear
      function whichTempWear( tempDegree ) {
         switch ( true ) {
             case tempDegree < -5:
@@ -120,5 +126,4 @@ function getNumberOfStudents() {
 addStudentToClass("Ali");
 getNumberOfStudents();
 console.log(class07Students);  
-
 
