@@ -66,9 +66,10 @@ function fetchFromLocation(Latitude,longitude){
  function writeDataFromFetch(weather){
     newCity.value = weather.name;
     div.innerHTML = `City : ${weather.name}`+"<br>"
-    div.innerHTML += `Temperature :  ${weather.main.temp}`+"<br>"
-    div.innerHTML += weather.weather[0].description + iconWriter(weather.weather[0].description)+'<br>'
-    div.innerHTML += `Wind speed : ${weather.wind.speed}`+"<br>"
+    div.innerHTML += `Temperature :  ${weather.main.temp}&#176c`+"<br>"
+    const weatherDecr = weather.weather[0].description
+    div.innerHTML += weatherDecr.charAt(0).toUpperCase()+weatherDecr.slice(1) + iconWriter(weatherDecr)+'<br>'
+    div.innerHTML += `Wind speed : ${weather.wind.speed}m/s `+"<br>"
     div.innerHTML += `It is ${weather.clouds.all}% Coudy`+"<br>"
     div.innerHTML += `Sunrise at : ${convertToTime(weather.sys.sunrise)}`+"<br>"
     div.innerHTML += `Sunrise at : ${convertToTime(weather.sys.sunset)}`+"<br>"
