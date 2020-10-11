@@ -5,13 +5,11 @@ const button = document.querySelector('button')
 const div = document.getElementById('center')
 
 search.addEventListener('change',startSearch)
-
+button.addEventListener('click',searchButton)
 
    function startSearch(){
       if (search.value){
       div.innerHTML = 'Please enter number to start search or just press button!'
-      button.addEventListener('click',searchButton)
-
    }
       else{
          div.innerHTML = 'Please fill the search term!'

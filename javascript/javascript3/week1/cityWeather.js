@@ -9,7 +9,7 @@
 // When sunrise and sunset is
 // Optional a map showing where the city is located
 
-function weatherToMyChoice() {
+function getWeather() {
   const button = document.getElementById('weatherButton');
   button.addEventListener('click', inputChange);
 
@@ -162,4 +162,4 @@ function retrieveFromLocalhost(callback) {
     console.log('please save a city first');
   }
 }
-weatherToMyChoice();
+getWeather();
