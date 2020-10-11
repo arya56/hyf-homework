@@ -12,16 +12,16 @@ WHERE due_date IS NULL;
 
 SELECT *
 FROM task
-    INNER JOIN status
-    ON task.status_id = status.id
-Where   status.name = 'Done';
+INNER JOIN status
+ON task.status_id = status.id
+WHERE status.name = 'Done';
 
 -- all the tasks that are not marked as done
 SELECT *
 FROM task
-    INNER JOIN status
-    ON task.status_id = status.id
-Where status.name != 'Done';
+INNER JOIN status
+ON task.status_id = status.id
+WHERE status.name != 'Done';
 
 -- all the tasks, sorted with the most recently created first
 
@@ -34,7 +34,7 @@ ORDER BY created DESC;
 SELECT *
 FROM task
 ORDER BY created DESC
- LIMIT 1;
+LIMIT 1;
 
 -- the title and due date of all tasks where the title or description contains database
 
@@ -47,19 +47,18 @@ WHERE description LIKE '%database%'
 
 SELECT task.title, status.name
 FROM status
-    JOIN task ON task.status_id = status.id;
+JOIN task ON task.status_id = status.id;
 
 --  the name of each status, along with a count of how many tasks have that status
 
-SELECT count(task.title) AS Task_Number, name
+SELECT COUNT(task.id) AS Task_Number, name AS status
 FROM status
-    JOIN task ON task.status_id = status.id
+JOIN task ON task.status_id = status.id
 GROUP BY status.name;
-
 -- the names of all statuses, sorted by the status with most tasks first
 
 SELECT count(task.title) AS Task_Number, name
 FROM status
-    JOIN task ON task.status_id = status.id
+JOIN task ON task.status_id = status.id
 GROUP BY status.name
 ORDER BY Task_Number DESC;
