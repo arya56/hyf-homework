@@ -45,7 +45,7 @@ function getWeather() {
       .then(response => response.json())
 
       .then(weather => {
-        writeDataFromFetch(weather);
+        renderOutput(weather);
       })
       .catch(error => {
         console.error('This is not a city!!! ', error);
@@ -59,19 +59,21 @@ function getWeather() {
       .then(response => response.json())
 
       .then(weather => {
-        writeDataFromFetch(weather);
+        renderOutput(weather);
       });
   }
 
-  function writeDataFromFetch(weather) {
+  function renderOutput(weather) {
     newCity.value = weather.name;
     div.innerHTML = `City : ${weather.name}` + '<br>';
     div.innerHTML += `Temperature :  ${weather.main.temp}&#176c` + '<br>';
     const weatherDesc = weather.weather[0].description;
+    const iconCode = weather.weather[0].icon;
     div.innerHTML +=
       weatherDesc.charAt(0).toUpperCase() +
       weatherDesc.slice(1) +
-      iconWriter(weatherDesc) +
+      '<br>'+
+      `<img src=http://openweathermap.org/img/w/${iconCode}.png >` +
       '<br>';
     div.innerHTML += `Wind speed : ${weather.wind.speed}m/s` + '<br>';
     div.innerHTML += `It is ${weather.clouds.all}% Coudy` + '<br>';
@@ -101,37 +103,7 @@ function getWeather() {
     localStorage.setItem('mySavedCity', newCity.value);
     console.log(newCity.value, ' Has been saved');
   }
-  //          show proper Icon
-  function iconWriter(kindOfWeather) {
-    switch (true) {
-      case kindOfWeather.includes('cloud'):
-        return ' <i class="fas fa-cloud"></i> ';
-
-      case kindOfWeather.includes('clear sky'):
-        return ' <i class="fas fa-sun"></i> ';
-
-      case kindOfWeather.includes('rain'):
-        return ' <i class="fas fa-cloud-showers-heavy"></i> ';
-
-      case kindOfWeather.includes('thunderstorm'):
-        return ' <i class="fas fa-poo-storm"></i> ';
-
-      case kindOfWeather.includes('snow'):
-        return ' <i class="fas fa-snowflake"></i> ';
-
-      case kindOfWeather.includes('mist'):
-        return ' <i class="fas fa-smog"></i> ';
-
-      case kindOfWeather.includes('smoke'):
-        return ' <i class="fas fa-smog"></i> ';
-
-      case kindOfWeather.includes('wind'):
-        return ' <i class="fas fa-wind"></i> ';
-
-      default:
-        return ' <i class="fas fa-temperature-low"></i> ';
-    }
-  }
+  
   //      Return time of the day from milisec
   function convertToTime(value) {
     const d = new Date(value * 1000);
