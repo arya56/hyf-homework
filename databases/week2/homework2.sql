@@ -37,6 +37,8 @@ WHERE description='edit current program';
 
 -- Part two
 -- Create a School database
+
+DROP DATABASE IF EXISTS school;
 CREATE DATABASE school;
 
 
@@ -93,7 +95,7 @@ WHERE user.name like 'Donald Duck' AND task.status_id = 1 ;
 
 
 -- Get all the tasks for 'Maryrose Meadows' that were created in september (hint: month(created)=month_number)
-
+SELECT task.title
 FROM task
 JOIN user_task on task.id = user_task.task_id
 JOIN user on user_task.user_id = user.id

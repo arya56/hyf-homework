@@ -21,7 +21,7 @@ USE `SupplyChain` ;
 -- Table `SupplyChain`.`Store`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `SupplyChain`.`Store` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `name_branch` VARCHAR(45) NULL DEFAULT NULL,
   `address` VARCHAR(45) NOT NULL,
   PRIMARY KEY (`id`))
@@ -34,7 +34,7 @@ COLLATE = utf8mb4_0900_ai_ci;
 -- Table `SupplyChain`.`Employee`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `SupplyChain`.`Employee` (
-  `id` INT NOT NULL,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(45) NOT NULL,
   `store_id` INT NOT NULL,
   `phone` VARCHAR(45) NULL DEFAULT NULL,
