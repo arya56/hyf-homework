@@ -2,9 +2,41 @@
     {
         "id" : 1,
         "title" : "Indian food in the summer",
-        "maxNumberOfGuests" : 5,
+        "maxNumberOfGuests" : 8,
         "description" : "A nice night out eating delicious indian food",
         "createdAt" : "2019/12/7 14:34",
         "price" : 67
+    },
+    {
+        "id" : 2,
+        "title" : "Persian southern cuisine",
+        "maxNumberOfGuests" : 7,
+        "description" : "Lunch on a very rainy winter day: Tahini Muge Been Rice",
+        "createdAt" : "2020/10/7 14:34",
+        "price" : 120
+    },
+    {
+        "id" : 6,
+        "title" : "Arabic cuisine",
+        "maxNumberOfGuests" : 8,
+        "description" : "meatball",
+        "createdAt" : "2020/10/9 14:34",
+        "price" : 100
+    },
+    {
+        "id" : 3,
+        "title" : "Greek cuisine",
+        "maxNumberOfGuests" : 2,
+        "description" : "soaked olived fresh meat ",
+        "createdAt" : "2019/10/9 14:34",
+        "price" : 150
+    },
+    {
+        "id" : 4,
+        "title" : "Italian cuisine",
+        "maxNumberOfGuests" : 2,
+        "description" : "spagetti",
+        "createdAt" : "2020/10/20 14:34",
+        "price" : 119
     }
 ]
