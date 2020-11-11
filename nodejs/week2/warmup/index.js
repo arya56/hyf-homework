@@ -4,6 +4,8 @@ const app = express();
 app.get('/', (req, res) => res.send('nodejs week2 homework'));
 
 app.get('/numbers/add', (req, res) => {
+
+  if (validator(req.query.first,req.query.second))
   const number1 = parseInt(req.query.first);
   const number2 = parseInt(req.query.second);
   if (req.query.first && req.query.second) {
@@ -41,7 +43,7 @@ app.get('/numbers/multiply/', (req, res) => {
 });
 app.listen(3000, () => console.log(`Calculator:listening on port 3000`));
 
-// function checker(numberA, numberB) {
+// function validator(numberA, numberB) {
 //   if (numberA & numberB) {
 //     firstNum = parseInt(numberA);
 //     secondNum = parseInt(numberB);
@@ -49,7 +51,7 @@ app.listen(3000, () => console.log(`Calculator:listening on port 3000`));
 //         return firstNum,secondNum;
 //     }
 //     else{
-//         return `Please write numbers on the query`
+//         return 0
 //     }
 //   }
 // }
