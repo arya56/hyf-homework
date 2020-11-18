@@ -5,7 +5,6 @@ app.get('/', (req, res) => res.send('nodejs week2 homework'));
 
 app.get('/numbers/add', (req, res) => {
 
-  if (validator(req.query.first,req.query.second))
   const number1 = parseInt(req.query.first);
   const number2 = parseInt(req.query.second);
   if (req.query.first && req.query.second) {
@@ -43,16 +42,19 @@ app.get('/numbers/multiply/', (req, res) => {
 });
 app.listen(3000, () => console.log(`Calculator:listening on port 3000`));
 
-// function validator(numberA, numberB) {
-//   if (numberA & numberB) {
-//     firstNum = parseInt(numberA);
-//     secondNum = parseInt(numberB);
-//     if(!isNaN(firstNum) && !isNaN(secondNum)){
-//         return firstNum,secondNum;
+///  help in creating a function
+
+// function returnValidation(num1,num2,valid1,valid2,f,g){
+//   if (num1 && num2) {
+//     const valNum2=parseInt(num2)
+//     const valNum1=parseInt(num1)
+//     if (!isNaN(valNum2) && !isNaN(valNum1)){
+//       valid1= valNum1
+//       valid2= valNum2
 //     }
 //     else{
-//         return 0
+//      g='Please write onlu numbers for the query'
 //     }
 //   }
-// }
 
+// }

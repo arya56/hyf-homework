@@ -4,11 +4,9 @@ const router = express.Router();
 
 router.get('/', async (req, res) => {
   try {
-    console.log('in meals');
     //  if the query includes maxPrice
     if (req.query.maxPrice) {
       const maxPrice = parseInt(req.query.maxPrice);
-      console.log(maxPrice);
       if (!isNaN(maxPrice)) {
         const cheapMeals = meals.filter(meal => meal.price < maxPrice);
 
