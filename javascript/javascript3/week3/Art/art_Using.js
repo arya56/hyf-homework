@@ -46,7 +46,6 @@ setInterval(() => {
 }, 100);
 
 // mouse move  creating circle around mouse cursor
-//const body = document.querySelector('body');
 canvas.addEventListener('mousemove', e => {
   x = e.offsetX;
   y = e.offsetY;
