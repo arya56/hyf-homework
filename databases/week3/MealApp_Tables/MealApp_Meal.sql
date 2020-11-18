@@ -29,7 +29,7 @@ CREATE TABLE `Meal` (
   `location` varchar(255) DEFAULT NULL,
   `when_create` datetime DEFAULT NULL,
   `max_reservations` int DEFAULT NULL,
-  `price` decimal(10,0) DEFAULT NULL,
+  `price` decimal(10,2) DEFAULT NULL,
   `created_date` date DEFAULT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;

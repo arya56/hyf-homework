@@ -97,11 +97,20 @@ FROM Meal
 WHERE price < 90;
 
 -- Get meals that still has available reservations
-SELECT Meal.title
-FROM Meal
-    JOIN Reservation
-    ON Meal.id = Reservation.meal_id
-WHERE Reservation.created_date > CURRENT_TIMESTAMP;
+-- SELECT Meal.title
+-- FROM Meal
+--     JOIN Reservation
+--     ON Meal.id = Reservation.meal_id
+-- WHERE Reservation.created_date > CURRENT_TIMESTAMP;
+select title,max_reservations- number_of_guest AS Available_reservation
+from Meal
+join (
+ select sum(number_of_guests) AS number_of_guest,meal_id
+ from Reservation
+ group by meal_id
+) AS guestNumber ON id = guestNumber.meal_id
+WHERE (max_reservations- number_of_guest ) > 0;
+
 
 -- Get meals that partially match a title. -- Rød grød med will match the meal with the title Rød grød med fløde
 
@@ -142,6 +151,6 @@ SELECT Meal.title AS ALL_Meal, AVG(Review.stars) AS Rates
 FROM Review
     RIGHT JOIN Meal
     ON Meal.id = Review.meal_id
-GROUP BY Meal.title
+GROUP BY Meal.id
 ORDER BY Rates DESC;
 
