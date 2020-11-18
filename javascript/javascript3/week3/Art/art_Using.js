@@ -31,14 +31,23 @@ c1.draw();
 
 // draw a circle every 100milisecond in random position with width and height of the screen
 setInterval(() => {
-  const newCircle = new Circle
-  (ranodmizer(pageWidth),ranodmizer(pageHeight),ranodmizer(pageWidth / 5),0,2,getRandomColor());
+  const randomX = randomizer(pageWidth);
+  const randomY = randomizer(pageHeight);
+  const randomR = randomizer(pageWidth / 5);
+  const newCircle = new Circle(
+    randomX,
+    randomY,
+    randomR,
+    0,
+    2,
+    getRandomColor()
+  );
   newCircle.draw();
 }, 100);
 
-// mouse move  creatin circle aroun mouse cursor
-const body = document.querySelector('body');
-body.addEventListener('mousemove', e => {
+// mouse move  creating circle around mouse cursor
+//const body = document.querySelector('body');
+canvas.addEventListener('mousemove', e => {
   x = e.offsetX;
   y = e.offsetY;
   setInterval(() => {
@@ -49,7 +58,7 @@ body.addEventListener('mousemove', e => {
 
 //  produce random number less than X
 
-function ranodmizer(x) {
+function randomizer(x) {
   return Math.floor(Math.random() * x);
 }
 

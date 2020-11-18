@@ -10,7 +10,7 @@ Promise.all(requests)
         return response.json();
       })
     );
-  })
+  }) 
   .then(users => {
     console.log('users', users); // creat external li 
     users.forEach(user => {
@@ -30,4 +30,7 @@ Promise.all(requests)
         });
       }
     });
+  })
+  .catch(error => { 
+    console.error(error.message)
   });
