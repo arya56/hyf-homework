@@ -1,5 +1,6 @@
 import { TodoWrapper } from './components/TodoWrapper';
 import { Counter } from './components/Counter';
+import {Fibonacci} from './components/Fibonacci'
 export function App() {
   const todos = [
     {
@@ -20,6 +21,7 @@ export function App() {
       <h1>Todo List</h1>
        <Counter />
       <TodoWrapper toDoList={todos} /> 
+      <Fibonacci/>
     </div>
   );
 }
