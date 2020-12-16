@@ -7,12 +7,13 @@ import Loader from './Loader';
 import './Git.css';
 export const UserContext = createContext(null);
 export const HandlerContext = createContext(null);
+
 export function GitBase() {
   const [userName, setUserName] = useState('');
   const [userIsLoaded, setUserIsLoaded] = useState(false);
   const [onLoading, setOnLoading] = useState(false);
   const [failsConnection, setFailsConnection] = useState(false);
-  // const [ripos, setRipos] = useState([]);
+  const [ripos, setRipos] = useState([]);
   return (
     <div>
       <h1 className="container">Github user searcher</h1>
@@ -33,6 +34,8 @@ export function GitBase() {
               setOnLoading,
               setFailsConnection,
               failsConnection,
+              ripos,
+              setRipos,
             }}
           >
             <GitList />
